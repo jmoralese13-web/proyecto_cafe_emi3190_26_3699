@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background-color:#f7f2ee;
+    color:#3e2723;
+}
+
+
+.header3190_26_3699{
+    background-color:#3e2723;
+}
+
+.navbar3190_26_3699{
+
+    width:90%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
+}
+
+.logo3190_26_3699{
+    color:white;
+    font-size:28px;
+}
+
+.menu3190_26_3699{
+
+    display:flex;
+    gap:20px;
+
+    list-style:none;
+}
+
+.menu3190_26_3699 a{
+
+    color:white;
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.menu3190_26_3699 a:hover{
+    color:#d7ccc8;
+}
+
+
+
+.banner3190_26_3699{
+
+    background-color:#6d4c41;
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.banner3190_26_3699 h2{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.banner3190_26_3699 p{
+    font-size:20px;
+}
+
+
+.contacto3190_26_3699{
+
+    width:90%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+
+    padding:60px 0;
+}
+
+.info3190_26_3699,
+.formulario3190_26_3699{
+
+    background-color:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.2);
+}
+
+.info3190_26_3699 h2,
+.formulario3190_26_3699 h2{
+
+    margin-bottom:20px;
+
+    color:#5d4037;
+}
+
+.info3190_26_3699 p{
+
+    margin-bottom:15px;
+
+    font-size:18px;
+}
+
+
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+textarea{
+
+    margin-bottom:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background-color:#f1f1f1;
+
+    font-size:16px;
+}
+
+textarea{
+    resize:none;
+    height:150px;
+}
+
+button{
+
+    background-color:#6d4c41;
+
+    color:white;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    background-color:#3e2723;
+}
+
+
+.mapa3190_26_3699{
+
+    width:90%;
+    margin:auto;
+
+    text-align:center;
+
+    padding-bottom:60px;
+}
+
+.mapa3190_26_3699 h2{
+    margin-bottom:25px;
+}
+
+.mapa3190_26_3699 img{
+
+    width:20%;
+
+    border-radius:18px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+
+.footer3190_26_3699{
+
+    background-color:#3e2723;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+.redes3190_26_3699{
+    margin-top:15px;
+}
+
+.redes3190_26_3699 a{
+
+    color:#d7ccc8;
+
+    margin:0 10px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.redes3190_26_3699 a:hover{
+    color:white;
+}
+
+
+
+@media(max-width:768px){
+
+    .navbar3190_26_3699{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .menu3190_26_3699{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .contacto3190_26_3699{
+        grid-template-columns:1fr;
+    }
+
+    .banner3190_26_3699 h2{
+        font-size:36px;
+    }
+}

@@ -1,0 +1,97 @@
+CREATE DATABASE IF NOT EXISTS Cafe_Aurora3190_26_3699;
+USE Cafe_Aurora3190_26_3699;
+
+CREATE TABLE Cliente3190_26_3699 (
+    Id_Cliente INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Telefono VARCHAR(20),
+    Correo VARCHAR(100),
+    Direccion VARCHAR(150)
+);
+
+CREATE TABLE Empleado3190_26_3699 (
+    Id_Empleado INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    Puesto VARCHAR(50) NOT NULL,
+    Telefono VARCHAR(20),
+    Correo VARCHAR(100)
+);
+
+CREATE TABLE Categoria3190_26_3699 (
+    Id_Categoria INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Descripcion VARCHAR(150)
+);
+
+CREATE TABLE Proveedor3190_26_3699 (
+    Id_Proveedor INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(80) NOT NULL,
+    Telefono VARCHAR(20),
+    Correo VARCHAR(100),
+    Direccion VARCHAR(150)
+);
+
+CREATE TABLE Metodo_Pago3190_26_3699 (
+    Id_Metodo_Pago INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Descripcion VARCHAR(150)
+);
+
+CREATE TABLE Producto3190_26_3699 (
+    Id_Producto INT AUTO_INCREMENT PRIMARY KEY,
+    Id_Categoria INT NOT NULL,
+    Id_Proveedor INT NOT NULL,
+    Nombre VARCHAR(80) NOT NULL,
+    Descripcion VARCHAR(150),
+    Precio DECIMAL(10,2) NOT NULL,
+    Stock INT NOT NULL
+);
+
+CREATE TABLE Pedido3190_26_3699 (
+    Id_Pedido INT AUTO_INCREMENT PRIMARY KEY,
+    Id_Cliente INT NOT NULL,
+    Id_Empleado INT NOT NULL,
+    Id_Metodo_Pago INT NOT NULL,
+    Fecha DATE NOT NULL,
+    Total DECIMAL(10,2) NOT NULL,
+    Estado VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Detalle_Pedido3190_26_3699(
+    Id_Detalle_Pedido INT AUTO_INCREMENT PRIMARY KEY,
+    Id_Pedido INT NOT NULL,
+    Id_Producto INT NOT NULL,
+    Cantidad INT NOT NULL,
+    Precio_Unitario DECIMAL(10,2) NOT NULL,
+    Subtotal DECIMAL(10,2) NOT NULL
+);
+
+ALTER TABLE Producto3190_26_3699
+ADD CONSTRAINT FK_Producto_Categoria3190_26_3699
+FOREIGN KEY (Id_Categoria) REFERENCES Categoria3190_26_3699(Id_Categoria);
+
+ALTER TABLE Producto3190_26_3699
+ADD CONSTRAINT FK_Producto_Proveedor3190_26_3699
+FOREIGN KEY (Id_Proveedor) REFERENCES Proveedor3190_26_3699(Id_Proveedor);
+
+ALTER TABLE Pedido3190_26_3699
+ADD CONSTRAINT FK_Pedido_Cliente3190_26_3699
+FOREIGN KEY (Id_Cliente) REFERENCES Cliente3190_26_3699(Id_Cliente);
+
+ALTER TABLE Pedido3190_26_3699
+ADD CONSTRAINT FK_Pedido_Empleado3190_26_3699
+FOREIGN KEY (Id_Empleado) REFERENCES Empleado3190_26_3699(Id_Empleado);
+
+ALTER TABLE Pedido3190_26_3699
+ADD CONSTRAINT FK_Pedido_Metodo_Pago3190_26_3699
+FOREIGN KEY (Id_Metodo_Pago) REFERENCES Metodo_Pago3190_26_3699(Id_Metodo_Pago);
+
+ALTER TABLE Detalle_Pedido3190_26_3699
+ADD CONSTRAINT FK_Detalle_Pedido_Pedido3190_26_3699
+FOREIGN KEY (Id_Pedido) REFERENCES Pedido3190_26_3699(Id_Pedido);
+
+ALTER TABLE Detalle_Pedido3190_26_3699
+ADD CONSTRAINT FK_Detalle_Pedido_Producto3190_26_3699
+FOREIGN KEY (Id_Producto) REFERENCES Producto3190_26_3699(Id_Producto);

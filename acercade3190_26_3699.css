@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f2ee;
+    color: #3e2723;
+}
+
+
+
+.header3190_26_3699 {
+    background-color: #3e2723;
+}
+
+.navbar3190_26_3699 {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo3190_26_3699 {
+    color: white;
+    font-size: 28px;
+}
+
+.menu3190_26_3699 {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu3190_26_3699 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu3190_26_3699 a:hover {
+    color: #d7ccc8;
+}
+
+/* BANNER */
+
+.banner3190_26_3699 {
+    background: linear-gradient(
+        rgba(62, 39, 35, 0.85),
+        rgba(62, 39, 35, 0.85)
+    );
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.banner3190_26_3699 h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.banner3190_26_3699 p {
+    font-size: 20px;
+}
+
+
+
+.info3190_26_3699 {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.texto3190_26_3699 {
+    background-color: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.texto3190_26_3699 h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #5d4037;
+}
+
+.texto3190_26_3699 p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+
+.creador3190_26_3699 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.card3190_26_3699 {
+    background-color: white;
+    width: 340px;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card3190_26_3699:hover {
+    transform: translateY(-8px);
+}
+
+.card3190_26_3699 img {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #d7ccc8;
+}
+
+.card3190_26_3699 h3 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #5d4037;
+}
+
+.card3190_26_3699 p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+.misionvision3190_26_3699 {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding-bottom: 60px;
+}
+
+.bloque3190_26_3699 {
+    background-color: #6d4c41;
+    color: white;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+
+.bloque3190_26_3699 h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.bloque3190_26_3699 p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
+.footer3190_26_3699 {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.redes3190_26_3699 {
+    margin-top: 15px;
+}
+
+.redes3190_26_3699 a {
+    color: #d7ccc8;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redes3190_26_3699 a:hover {
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .navbar3190_26_3699 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu3190_26_3699 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner3190_26_3699 h2 {
+        font-size: 36px;
+    }
+
+    .misionvision3190_26_3699 {
+        grid-template-columns: 1fr;
+    }
+
+    .card3190_26_3699 {
+        width: 90%;
+    }
+}
